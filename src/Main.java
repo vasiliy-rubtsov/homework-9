@@ -41,21 +41,9 @@ public class Main {
         System.out.println("Задача 4");
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int i = 0;
-        int j = reverseFullName.length - 1;
-
-        while (i < j) {
-            // меняем местами первый элемент с последним, 2-й с предпоследним и т.д.
-            char c = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[j];
-            reverseFullName[j] = c;
-            i++;
-            j--;
-        }
-
         // Ввывод на печать
-        for (char c : reverseFullName) {
-            System.out.print(c);
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
         System.out.println();
         System.out.println("-----");
